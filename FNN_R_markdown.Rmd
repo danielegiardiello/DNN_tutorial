@@ -17,15 +17,22 @@ In this section, we load required R packages and functions, simulate data, and c
 
 ```{r Load R packages, warning=FALSE, message=FALSE}
 ## Install and load R packages
-library(ggplot2)
-library(ggforce)
-library(gghighlight)
-library(keras)
-library(reticulate)
-library(tensorflow)
-library(tibble)
-library(kernlab)
-library(ddpcr)
+
+if (!require("pacman")) install.packages("pacman")
+library(pacman)
+
+pacman::p_load(
+  ggplot2,
+  ggforce,
+  gghighlight,
+  keras,
+  reticulate,
+  tensorflow,
+  tibble,
+  kernlab,
+  ddpcr
+)
+
 ```
 
 ```{r function}
